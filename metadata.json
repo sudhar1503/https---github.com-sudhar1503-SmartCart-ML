@@ -1,0 +1,6 @@
+{
+  "name": "SmartCart ML",
+  "description": "Algorithmic editorial commerce with real-time budget telemetry and explainable machine-learning product recommendations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

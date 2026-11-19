@@ -1,0 +1,78 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-metric: "Space Grotesk", monospace;
+
+  --color-canvas: #faf8ff;
+  --color-surface-low: #f2f3ff;
+  --color-surface-container: #eaedff;
+  --color-ink: #131b2e;
+  --color-ink-muted: #464555;
+  --color-primary: #4F46E5;
+  --color-primary-deep: #3525cd;
+  --color-emerald-health: #10B981;
+  --color-rose-friction: #F43F5E;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: #faf8ff;
+    color: #131b2e;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+.font-metric {
+  font-family: var(--font-metric);
+  font-variant-numeric: tabular-nums;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Custom subtle range slider */
+input[type="range"].smartcart-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  border-radius: 9999px;
+  background: #e2e8f0;
+  outline: none;
+}
+
+input[type="range"].smartcart-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 9999px;
+  background: #4F46E5;
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 6px rgba(79, 70, 229, 0.35);
+  cursor: pointer;
+  transition: transform 150ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+input[type="range"].smartcart-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+}
+
+input[type="range"].smartcart-slider:focus-visible::-webkit-slider-thumb {
+  box-shadow: 0 0 0 4px rgba(79, 70, 229, 0.2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
